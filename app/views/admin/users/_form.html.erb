@@ -1,0 +1,35 @@
+<div class="border-form-div">
+<%= form_for([:admin, @user]) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :first_name, :autofocus => true, :class => 'form-control', :placeholder => 'First Name' %>
+  <%= f.text_field :last_name, :class => 'form-control', :placeholder => 'Last Name' %>
+  <%= f.text_field :date_of_birth, :class => 'datepicker form-control', :placeholder => 'Birthday' %>
+  <%= f.text_area  :bio, :class => 'form-control', :rows => '5', :placeholder => 'Simple Bio' %>
+  <%= f.label :Photo%> <%= f.file_field :image%>
+
+  <%= f.email_field :email, :autofocus => true, :placeholder => 'Email address' %>
+  <%= f.password_field :password, :placeholder => 'Password' %>
+  <%= f.password_field :password_confirmation, :placeholder => 'Password confirmation' %>
+  </br>
+  <%= f.submit "Save",:class=>'btn btn-primary' %>
+  
+<% end %>
+</div>
+
+
+<script type="text/javascript">
+  $(function() {
+    $('.datepicker').pickadate({format:'ddd, d mmm yyyy'});
+  });
+</script>

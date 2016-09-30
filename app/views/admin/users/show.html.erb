@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class="border-form-div">
+<div class="form-group">
+  <strong>Name:</strong><%= @user.full_name %>
+</div>
+
+<div class="form-group">
+  <strong>Email:</strong><%= @user.email %>
+</div>
+
+<div class="form-group">
+  <strong>Birthday:</strong><%= @user.date_of_birth %>
+</div>
+
+<div class="form-group">
+  <strong>Bio:</strong><%= @user.bio %>
+</div>
+
+<div class='form-group'>
+	<b>Photo:</b><br>
+	<%= image_tag(@user.image_url, class: 'img-responsive img-circle') %>
+</div>
+
+<%= link_to 'Edit', edit_admin_user_path(@user), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_users_path, class: 'btn btn-default' %>
+
+<%= link_to 'Report to Admin',pdfcommit_admin_user_path(@user), class: 'btn btn-primary' %>
+</div>

@@ -13,7 +13,14 @@
 ActiveRecord::Schema.define(version: 20160912085454) do
 
   create_table "users", force: :cascade do |t|
+    t.boolean  "admin",                  default: false
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email",                  default: "", null: false
+    t.date     "date_of_birth"
+    t.text     "bio"
+    t.string   "image"
+
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

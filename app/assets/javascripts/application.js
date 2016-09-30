@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require twitter/bootstrap
+//= require pickadate/picker
+//= require pickadate/picker.date

@@ -13,6 +13,9 @@
  *= require twitter/bootstrap
  *= require_self
  *= require_tree .
+*= require pickadate/default
+*= require pickadate/default.date
+*= require pickadate/default.time
  */
 
 body {

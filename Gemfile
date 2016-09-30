@@ -3,7 +3,21 @@ source 'https://rubygems.org'
 # ********** Addtional Gems ***********
 gem "bootstrap-sass-rails", "~> 2.2.2.0"
 # *************************************
+# Debugging Gem
+gem 'pry-rails'
+
+# PDF Generation Gem
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+# Devise Gem
 gem 'devise'
+# Datepicker gem
+gem 'pickadate-rails'
+
+# Use carrierwave & mini_magick for Image Upload 
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
